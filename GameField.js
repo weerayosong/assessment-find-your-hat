@@ -41,7 +41,7 @@ export default class GameField {
 
     askMove() {
         const move = prompt(
-            `Where's my hat(chet)? I.. need.. need... (W = UP, S = DOWN, A = LEFT, D = RIGHT) the 'press ENTER': `,
+            `Where's my hat(chet)? I.. need.. need... (W = moveup, S = movedown, A = moveleft, D = moveright) then 'press ENTER': `,
         ).toUpperCase();
         switch (move) {
             case 'W':
