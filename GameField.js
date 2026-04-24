@@ -15,6 +15,42 @@ export default class GameField {
         this.locationY = 0;
         this.isPlaying = true;
     }
+    // static นิ่งๆ ทื่อๆ บื้อๆ แต่ง่าย จะเรียกก็เรียก ไม่ต้องสร้าง object ไม่ต้องชี้เป้า เรียกก็ทำ
+    static generateField() {
+        let size = 0;
+
+        // wanna play game with me? while(!true) you'll stay here with 😈 me forever!
+        while (size < 3 || size > 6 || isNaN(size)) {
+            const input = prompt(
+                `How big is your playground [Oh~! how long you can run away from me? :)]? (Enter 3 - 6 for 3x3 to 6x6 Map): `,
+            );
+            size = parseInt(input, 10);
+
+            if (size < 3 || size > 6 || isNaN(size)) {
+                console.log(`Don't play games with me... I said 3 to 6!!`);
+            }
+        }
+
+        // 1. สร้าง Array 2 มิติเปล่าๆ + (FIELD)
+        const field = new Array(size)
+            .fill(0)
+            .map(() => new Array(size).fill(FIELD));
+
+        // 2. สุ่มตำแหน่งขวาน (ต้องไม่ทับจุดเกิด 0,0)
+        // 👿 Crap! I caught you now, the one who hid my hat(chet).
+        let hatchetX = 0;
+        let hatchetY = 0;
+        while (hatchetX === 0 && hatchetY === 0) {
+            hatchetX = Math.floor(Math.random() * size);
+            hatchetY = Math.floor(Math.random() * size);
+        }
+        field[hatchetY][hatchetX] = HATCHET;
+
+        // 3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
+        field[0][0] = PLAYER_PATH;
+
+        return field;
+    }
 
     printMap() {
         console.clear();
