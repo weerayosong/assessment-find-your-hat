@@ -63,13 +63,42 @@ export default class GameField {
         }
     }
 
-    checkGameStatus() {}
-    // next commit
+    checkGameStatus() {
+        if (
+            this.locationY < 0 ||
+            this.locationY >= this.field.length ||
+            this.locationX < 0 ||
+            this.locationX >= this.field[0].length
+        ) {
+            console.log(
+                `\nHow dare! ${this.playerName} Argh!! Where am i NOW!? \nYou OUT!`,
+            );
+            this.isPlaying = false;
+            return;
+        }
+
+        const currentTile = this.field[this.locationY][this.locationX];
+
+        if (currentTile === HATCHET) {
+            console.log(
+                `\nWow! ${this.playerName}! Heh heh, Nice Hatchet i wanna use it with you now, \nYou WIN!`,
+            );
+            this.isPlaying = false;
+        } else if (currentTile === HOLE) {
+            console.log(
+                `\nNooooo! ${this.playerName} Why you push me to this trap! \nYou LOSE!`,
+            );
+            this.isPlaying = false;
+        } else {
+            this.field[this.locationY][this.locationX] = PLAYER_PATH;
+        }
+    }
 
     play() {
         while (this.isPlaying) {
             this.printMap();
             this.askMove();
+            this.checkGameStatus();
         }
     }
 }

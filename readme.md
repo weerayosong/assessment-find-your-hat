@@ -43,6 +43,13 @@ I need my hat(chet) in no time! 🪓
 - Print Map
 
 **okay, first i complete the 'input process output' of user interface now**
-**next,it's fun part in the last, game logic 😈😈😈**
 
-update map & game logic, coming soon
+- next,it's fun part in the last, game logic 😈😈😈
+
+- update map & game logic, coming soon
+
+---
+
+- it's nearly noon now ⏱️ !!
+- update map & game logic, done!
+  **next, it's implementation phase, i hope i can done it all on time 😣😥😮‍💨**
