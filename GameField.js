@@ -49,6 +49,22 @@ export default class GameField {
         // 3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
         field[0][0] = PLAYER_PATH;
 
+        // 4. เพิ่มความยาก แมพใหญ่ หลุมเยอะขึ้น 20%
+        const totalHoles = Math.floor(size * 1.2); // 3x1.2=3.6=>3หลุม, 4x1.2=4.8=>4หลุม, 5x1.6=>6หลุม, 6x1.2=7.2=>7หลุม
+
+        // 5. หลุมวางสุดท้ายเพราะ ไม่สำคัญเท่า ตัวละคร ขวาน
+        let holesPlaced = 0;
+        while (holesPlaced < totalHoles) {
+            const hX = Math.floor(Math.random() * size);
+            const hY = Math.floor(Math.random() * size);
+
+            // ต้องเช็คว่าช่องนั้นว่างอยู่ (ไม่ทับจุดเกิด ไม่ทับขวาน และยังไม่มีหลุม)
+            if (field[hY][hX] === FIELD) {
+                field[hY][hX] = HOLE;
+                holesPlaced++;
+            }
+        }
+
         return field;
     }
 

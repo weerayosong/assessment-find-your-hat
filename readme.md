@@ -65,12 +65,11 @@ plot an implementation phase before the break 🍵
 **generateField()**
 
 0. init & add new user prompt for map size + user input for map's size
-1. สร้าง Array 2 มิติเปล่าๆ + (FIELD)
-2. เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must
-3. สุ่มตำแหน่งขวาน (ต้องไม่ทับจุดเกิด 0,0) 👿 Crap! I caught you now, the one who hid my hat(chet).
-4. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
-5. คำนวณและสุ่มตำแหน่งหลุมตาม % ที่ตั้งไว้ improve difficulty, but not much 15-20% is cool
-6. หลุมวางสุดท้ายเพราะ ไม่สำคัญเท่า ตัวละคร ขวาน แต่!! ต้องเช็คว่าช่องนั้นว่างอยู่ (ไม่ทับจุดเกิด ไม่ทับขวาน และยังไม่มีหลุม)
+1. สร้าง Array 2 มิติเปล่าๆ + (FIELD) / เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must
+2. สุ่มตำแหน่งขวาน (ต้องไม่ทับจุดเกิด 0,0) 👿 Crap! I caught you now, the one who hid my hat(chet).
+3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
+4. คำนวณและสุ่มตำแหน่งหลุมตาม % ที่ตั้งไว้ improve difficulty, but not much 15-20% is cool
+5. หลุมวางสุดท้ายเพราะ ไม่สำคัญเท่า ตัวละคร ขวาน แต่!! ต้องเช็คว่าช่องนั้นว่างอยู่ (ไม่ทับจุดเกิด ไม่ทับขวาน และยังไม่มีหลุม)
    🙃🙃🙃
    **coming soon on after noon, see ya!**
 
@@ -99,8 +98,18 @@ const map = GameField.generateField();
 
 - random x and y then assign it,that's all
 
-## // 3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
+## 3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
 
         😈: Yup I love my (0,0), I'm always start from Top-Left of the map
 
 Okay, looks good enough, full game can run through without HOLES(x) atm, commit and push
+
+## 4. เพิ่มความยาก แมพใหญ่ หลุมเยอะขึ้น 20% | 120% คือ 1.2 ok na
+
+```
+        const totalHoles = Math.floor(size * 1.2); // 3x1.2=3.6=>3หลุม, 4x1.2=4.8=>4หลุม, 5x1.6=>6หลุม, 6x1.2=7.2=>7หลุม
+```
+
+## 5. random วางหลุม ให้เท่าจำนวนข้อ 4 แต่ต้องวาง === FIELD (ช่อง +) เท่านั้น
+
+### commit,have fun and done.
