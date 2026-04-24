@@ -64,11 +64,12 @@ plot an implementation phase before the break 🍵
 
 **generateField()**
 
+0. init & add new user prompt for map size + user input for map's size
 1. สร้าง Array 2 มิติเปล่าๆ + (FIELD)
 2. เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must
-3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
-4. คำนวณและสุ่มตำแหน่งหลุมตาม % ที่ตั้งไว้ improve difficulty, but not much 15-20% is cool
-5. สุ่มตำแหน่งขวาน (ต้องไม่ทับจุดเกิด 0,0) 👿 Crap! I caught you now, the one who hid my hat(chet).
+3. สุ่มตำแหน่งขวาน (ต้องไม่ทับจุดเกิด 0,0) 👿 Crap! I caught you now, the one who hid my hat(chet).
+4. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
+5. คำนวณและสุ่มตำแหน่งหลุมตาม % ที่ตั้งไว้ improve difficulty, but not much 15-20% is cool
 6. หลุมวางสุดท้ายเพราะ ไม่สำคัญเท่า ตัวละคร ขวาน แต่!! ต้องเช็คว่าช่องนั้นว่างอยู่ (ไม่ทับจุดเกิด ไม่ทับขวาน และยังไม่มีหลุม)
    🙃🙃🙃
    **coming soon on after noon, see ya!**
@@ -94,7 +95,9 @@ plot an implementation phase before the break 🍵
 const map = GameField.generateField();
 ```
 
-## 2. เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must
+## 2. เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must (lol, forget to update readme)
+
+- random x and y then assign it,that's all
 
 ## // 3. 😈 You don't need to random my respawn pos, with my hat(chet) in hand, I ALWAYS FOUND YOU! :) 🪓🩸
 
