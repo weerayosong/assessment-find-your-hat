@@ -26,3 +26,23 @@ I need my hat(chet) in no time! 🪓
 **\* me😈, + path, x hole, ^ hat(chet)**
 
 - when everything's alright, i will make the random map.
+
+---
+
+## i use 2 main files
+
+- index.js >> Main game control.
+- Gamefiled.js >> ALl game logics here.
+- Class Method ที่ควรมีครบ
+- constructor
+- moveRight
+- moveLeft
+- moveUp
+- moveDown
+
+- Print Map
+
+**okay, first i complete the 'input process output' of user interface now**
+**next,it's fun part in the last, game logic 😈😈😈**
+
+update map & game logic, coming soon
