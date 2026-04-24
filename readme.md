@@ -78,7 +78,7 @@ plot an implementation phase before the break 🍵
 
 ## 0. generateField() return field; //จะวาดอะไรใน log?
 
-## 1.สร้าง Array 2 มิติเปล่าๆ + (FIELD)
+## 1.สร้าง Array 2 มิติเปล่าๆ + (FIELD) / เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must (lol, forget to update readme)
 
 -ใน array field มีอะไร
 
@@ -95,7 +95,7 @@ plot an implementation phase before the break 🍵
 const map = GameField.generateField();
 ```
 
-## 2. เจนขนาดแมพ 3x3 to 6x6 array ก็ดี 'ต้อง' ทำทัน A Must (lol, forget to update readme)
+## 2. สุ่มตำแหน่งขวาน ของสำคัญ
 
 - random x and y then assign it,that's all
 
